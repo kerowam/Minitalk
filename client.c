@@ -5,8 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 15:08:26 by gfredes-          #+#    #+#             */
-/*   Updated: 2023/11/08 15:30:06 by gfredes-         ###   ########.fr       */
+/*   Created: 2023/11/08 18:13:19 by gfredes-          #+#    #+#             */
+/*   Updated: 2023/11/08 18:28:52 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "minitalk.h"
+
+int	main(void)
+{
+	return (0);
+}

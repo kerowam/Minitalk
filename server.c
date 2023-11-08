@@ -6,7 +6,16 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 15:08:12 by gfredes-          #+#    #+#             */
-/*   Updated: 2023/11/08 15:08:14 by gfredes-         ###   ########.fr       */
+/*   Updated: 2023/11/08 18:21:49 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "minitalk.h"
+
+int	main(void)
+{
+	ft_putstr_fd("PID: ", 1);
+	ft_putnbr_fd(getpid(), 1);
+	ft_putstr_fd("\n", 1);
+	return (0);
+}

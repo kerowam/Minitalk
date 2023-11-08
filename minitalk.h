@@ -6,7 +6,13 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 15:31:52 by gfredes-          #+#    #+#             */
-/*   Updated: 2023/11/08 17:10:24 by gfredes-         ###   ########.fr       */
+/*   Updated: 2023/11/08 17:57:17 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef MINITALK_H
+# define MINITALK_H
+
+# include "./libft/libft.h"
+
+#endif
