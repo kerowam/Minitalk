@@ -6,11 +6,27 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 18:13:19 by gfredes-          #+#    #+#             */
-/*   Updated: 2023/11/08 19:58:52 by gfredes-         ###   ########.fr       */
+/*   Updated: 2023/11/08 20:01:23 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
+
+void	ft_sending_bits(int pid, char c)
+{
+	int	bit;
+
+	bit = 0;
+	while (bit < 8)
+	{
+		if ((c & (0x01 << bit)) == 1)
+			kill(pid, SIGUSR1);
+		else
+			kill(pid, SIGUSR2);
+		bit++;
+		usleep(100);
+	}
+}
 
 int	main(int argc, char **argv)
 {

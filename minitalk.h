@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 15:31:52 by gfredes-          #+#    #+#             */
-/*   Updated: 2023/11/08 17:57:17 by gfredes-         ###   ########.fr       */
+/*   Updated: 2023/11/08 19:44:27 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 # define MINITALK_H
 
 # include "./libft/libft.h"
-
+# include "signal.h"
 #endif
