@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 18:13:19 by gfredes-          #+#    #+#             */
-/*   Updated: 2023/11/08 20:01:23 by gfredes-         ###   ########.fr       */
+/*   Updated: 2023/11/08 20:52:16 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_sending_bits(int pid, char c)
 	bit = 0;
 	while (bit < 8)
 	{
-		if ((c & (0x01 << bit)) == 1)
+		if ((c & (0x01 << bit)) != 0)
 			kill(pid, SIGUSR1);
 		else
 			kill(pid, SIGUSR2);
@@ -39,12 +39,17 @@ int	main(int argc, char **argv)
 		ft_putstr_fd("Indications of the program: ./client <PID> <String>", 1);
 		return (1);
 	}
-	pid = ft_atoi(argv[1]);
-	if (!ft_isdigit(pid))
+	i = 0;
+	while (argv[1][i] != '\0')
 	{
-		ft_putstr_fd("Wrong PID! It have to be a number.\n", 1);
-		return (2);
+		if (!ft_isdigit(argv[1][i]))
+		{
+			ft_putstr_fd("Wrong PID! It have to be a number.\n", 1);
+			return (2);
+		}
+		i++;
 	}
+	pid = ft_atoi(argv[1]);
 	i = 0;
 	while (argv[2][i] != '\0')
 	{
