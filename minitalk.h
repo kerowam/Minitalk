@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 15:31:52 by gfredes-          #+#    #+#             */
-/*   Updated: 2023/11/08 19:44:27 by gfredes-         ###   ########.fr       */
+/*   Updated: 2023/11/10 23:04:10 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,4 +15,6 @@
 
 # include "./libft/libft.h"
 # include "signal.h"
+# include <unistd.h>
+# include <stdlib.h>
 #endif

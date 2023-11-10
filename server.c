@@ -6,7 +6,7 @@
 /*   By: gfredes- <gfredes-@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 15:08:12 by gfredes-          #+#    #+#             */
-/*   Updated: 2023/11/08 20:35:24 by gfredes-         ###   ########.fr       */
+/*   Updated: 2023/11/10 22:06:48 by gfredes-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,9 @@ int	main(void)
 	ft_putstr_fd("PID: ", 1);
 	ft_putnbr_fd(getpid(), 1);
 	ft_putstr_fd("\n", 1);
+	signal(SIGUSR1, ft_sig_handler);
+	signal(SIGUSR2, ft_sig_handler);
 	while (1)
-	{
-		signal(SIGUSR1, ft_sig_handler);
-		signal(SIGUSR2, ft_sig_handler);
 		pause();
-	}
 	return (0);
 }
